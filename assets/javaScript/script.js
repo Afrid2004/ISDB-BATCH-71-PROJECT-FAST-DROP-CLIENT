@@ -10,9 +10,9 @@ const MobileMenuToggle = () => {
 // swipper js
 const swiper = new Swiper(".swiper", {
   loop: true,
-  autoplay: {
-    delay: 5000,
-  },
+  // autoplay: {
+  //   delay: 5000,
+  // },
   pagination: {
     el: ".swiper-pagination",
     dynamicBullets: true,

@@ -20,7 +20,15 @@
   bottom: 2rem !important;
 }
 .swiper-pagination-bullet-active {
-  background-color: #00bba7;
+  background-color: #00bba7 !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: white;
+}
+
+.autor-list li:not(:first-child) {
+  margin-left: -1rem !important;
 }
 
 /* pagination styles */
