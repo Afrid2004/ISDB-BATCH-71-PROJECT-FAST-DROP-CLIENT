@@ -31,6 +31,26 @@
   margin-left: -1rem !important;
 }
 
+/* about us designs */
+.headTitle {
+  width: fit-content;
+  position: relative;
+  margin: auto;
+  padding-bottom: 1rem;
+  font-family: "Roboto Slab", serif;
+}
+.headTitle::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #00bba7;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(0.6);
+}
+
 /* pagination styles */
 /* .swiper-button-next,
 .swiper-button-prev {
