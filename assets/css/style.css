@@ -52,5 +52,8 @@
   border-bottom: 1px solid rgb(228, 228, 228);
 }
 .scroll-header .container .desktop-menu a {
-  color: #162636 !important;
+  color: #162636;
+}
+.scroll-header .container .desktop-menu a:hover {
+  color: #00bba7;
 }
