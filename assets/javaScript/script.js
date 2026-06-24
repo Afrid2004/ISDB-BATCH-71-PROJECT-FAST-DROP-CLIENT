@@ -29,22 +29,37 @@ let aboutSection = document.querySelector("#about"),
   logo = document.querySelector("#logo");
 
 const animationTriggerFunction = (
-  targetSection,
-  currentSection,
-  activeClass,
+  targetSection = "",
+  activeClass = "",
+  currentSection = "",
+  threshold = 0,
 ) => {
-  let observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        currentSection.classList.add(activeClass);
-        logo.src = "/assets/images/logo_black.png";
-      } else {
-        currentSection.classList.remove(activeClass);
-        logo.src = "/assets/images/logo_white.png";
-      }
-    });
-  });
+  let observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          currentSection.classList.add(activeClass);
+        }
+
+        if (activeClass == "scroll-header") {
+          if (entry.isIntersecting) {
+            currentSection.classList.add(activeClass);
+            logo.src = "/assets/images/logo_black.png";
+          } else {
+            currentSection.classList.remove(activeClass);
+            logo.src = "/assets/images/logo_white.png";
+          }
+        }
+      });
+    },
+    {
+      threshold,
+    },
+  );
   observer.observe(targetSection);
 };
 
-animationTriggerFunction(aboutSection, header, "scroll-header");
+// header animation
+animationTriggerFunction(aboutSection, "scroll-header", header);
+// about section animation
+animationTriggerFunction(aboutSection, "scroll-about", aboutSection, 0.5);
