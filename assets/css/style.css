@@ -47,25 +47,10 @@
   left: 0;
 }
 
-/* pagination styles */
-/* .swiper-button-next,
-.swiper-button-prev {
-  color: white;
-  height: 50px;
-  width: 50px;
-  background: rgba(0, 0, 0, 0.281);
-  border-radius: 50%;
+.scroll-header {
+  background-color: white !important;
+  border-bottom: 1px solid rgb(228, 228, 228);
 }
-
-.swiper-button-prev {
-  left: 20px !important;
+.scroll-header .container .desktop-menu a {
+  color: #162636 !important;
 }
-.swiper-button-next {
-  right: 20px !important;
-} */
-
-/* pagination styles */
-/* .swiper-button-next svg,
-.swiper-button-prev svg {
-  height: 20px;
-} */
