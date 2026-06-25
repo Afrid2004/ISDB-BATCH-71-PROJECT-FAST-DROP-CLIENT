@@ -65,3 +65,17 @@ animationTriggerFunction(aboutSection, "scroll-about", 0.5);
 
 // why choose section animation
 animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.5);
+
+//video modal
+let videoModal = document.getElementById("video_modal"),
+  iframe = videoModal.querySelector("iframe");
+
+const handleVideoModal = (src = "") => {
+  if (videoModal.classList.contains("active-modal")) {
+    videoModal.classList.remove("active-modal");
+    iframe.src = "";
+    return;
+  }
+  videoModal.classList.add("active-modal");
+  iframe.src = src;
+};
