@@ -25,30 +25,31 @@ const swiper = new Swiper(".swiper", {
 
 // on scroll animation scripts
 let aboutSection = document.querySelector("#about"),
+  whyChooseSection = document.querySelector("#why_choose"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
+
+// header animation trigger
+document.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    header.classList.add("scroll-header");
+    logo.src = "/assets/images/logo_black.png";
+  } else {
+    header.classList.remove("scroll-header");
+    logo.src = "/assets/images/logo_white.png";
+  }
+});
 
 const animationTriggerFunction = (
   targetSection = "",
   activeClass = "",
-  currentSection = "",
   threshold = 0,
 ) => {
   let observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          currentSection.classList.add(activeClass);
-        }
-
-        if (activeClass == "scroll-header") {
-          if (entry.isIntersecting) {
-            currentSection.classList.add(activeClass);
-            logo.src = "/assets/images/logo_black.png";
-          } else {
-            currentSection.classList.remove(activeClass);
-            logo.src = "/assets/images/logo_white.png";
-          }
+          targetSection.classList.add(activeClass);
         }
       });
     },
@@ -59,7 +60,8 @@ const animationTriggerFunction = (
   observer.observe(targetSection);
 };
 
-// header animation
-animationTriggerFunction(aboutSection, "scroll-header", header);
 // about section animation
-animationTriggerFunction(aboutSection, "scroll-about", aboutSection, 0.5);
+animationTriggerFunction(aboutSection, "scroll-about", 0.5);
+
+// why choose section animation
+animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.5);
