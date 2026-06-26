@@ -27,6 +27,7 @@ const swiper = new Swiper(".swiper", {
 let aboutSection = document.querySelector("#about"),
   whyChooseSection = document.querySelector("#why_choose"),
   animateServices = document.querySelectorAll(".animate-services"),
+  portfolioElement = document.querySelectorAll(".portfolioElement"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
 
@@ -69,7 +70,12 @@ animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.4);
 
 // our sercices animation
 animateServices.forEach((service) => {
-  animationTriggerFunction(service, "scroll-services", 0.4);
+  animationTriggerFunction(service, "scroll-services", 0.3);
+});
+
+//portfolio animation
+portfolioElement.forEach((element) => {
+  animationTriggerFunction(element, "scroll-portfolio", 0.4);
 });
 
 //video modal
