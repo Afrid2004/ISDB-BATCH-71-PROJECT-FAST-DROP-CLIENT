@@ -7,7 +7,7 @@ const MobileMenuToggle = () => {
   menuSidebar.classList.toggle("menu-sidebar-toggle");
 };
 
-// swipper js
+// swipper js for hero slider
 const swiper = new Swiper(".swiper", {
   loop: true,
   autoplay: {
@@ -28,6 +28,7 @@ let aboutSection = document.querySelector("#about"),
   whyChooseSection = document.querySelector("#why_choose"),
   animateServices = document.querySelectorAll(".animate-services"),
   portfolioElement = document.querySelectorAll(".portfolioElement"),
+  trackingSection = document.querySelector(".trackingSection"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
 
@@ -78,6 +79,9 @@ portfolioElement.forEach((element) => {
   animationTriggerFunction(element, "scroll-portfolio", 0.4);
 });
 
+//tracking section
+animationTriggerFunction(trackingSection, "scroll-tracking", 0.4);
+
 //video modal
 let videoModal = document.getElementById("video_modal"),
   iframe = videoModal.querySelector("iframe");
@@ -91,3 +95,5 @@ const handleVideoModal = (src = "") => {
   videoModal.classList.add("active-modal");
   iframe.src = src;
 };
+
+// testomonial swipper
