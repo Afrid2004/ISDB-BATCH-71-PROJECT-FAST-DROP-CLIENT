@@ -26,6 +26,7 @@ const swiper = new Swiper(".swiper", {
 // on scroll animation scripts
 let aboutSection = document.querySelector("#about"),
   whyChooseSection = document.querySelector("#why_choose"),
+  animateServices = document.querySelectorAll(".animate-services"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
 
@@ -61,10 +62,15 @@ const animationTriggerFunction = (
 };
 
 // about section animation
-animationTriggerFunction(aboutSection, "scroll-about", 0.5);
+animationTriggerFunction(aboutSection, "scroll-about", 0.4);
 
 // why choose section animation
-animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.5);
+animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.4);
+
+// our sercices animation
+animateServices.forEach((service) => {
+  animationTriggerFunction(service, "scroll-services", 0.4);
+});
 
 //video modal
 let videoModal = document.getElementById("video_modal"),

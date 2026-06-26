@@ -57,3 +57,25 @@
 .scroll-header .container .desktop-menu a:hover {
   color: #00bba7;
 }
+
+.underline-text {
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+}
+
+.underline-text::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  background: #00bba7;
+  transition: all 0.2s ease-in-out;
+}
+
+.underline-text:hover::after {
+  transform: scaleX(1);
+}
