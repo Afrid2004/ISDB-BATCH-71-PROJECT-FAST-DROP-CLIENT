@@ -29,6 +29,7 @@ let aboutSection = document.querySelector("#about"),
   animateServices = document.querySelectorAll(".animate-services"),
   portfolioElement = document.querySelectorAll(".portfolioElement"),
   trackingSection = document.querySelector(".trackingSection"),
+  blogElements = document.querySelectorAll(".blogElements"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
 
@@ -64,10 +65,10 @@ const animationTriggerFunction = (
 };
 
 // about section animation
-animationTriggerFunction(aboutSection, "scroll-about", 0.4);
+animationTriggerFunction(aboutSection, "scroll-about", 0.3);
 
 // why choose section animation
-animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.4);
+animationTriggerFunction(whyChooseSection, "scroll-why-choose", 0.3);
 
 // our sercices animation
 animateServices.forEach((service) => {
@@ -76,11 +77,16 @@ animateServices.forEach((service) => {
 
 //portfolio animation
 portfolioElement.forEach((element) => {
-  animationTriggerFunction(element, "scroll-portfolio", 0.4);
+  animationTriggerFunction(element, "scroll-portfolio", 0.3);
 });
 
 //tracking section
-animationTriggerFunction(trackingSection, "scroll-tracking", 0.4);
+animationTriggerFunction(trackingSection, "scroll-tracking", 0.3);
+
+//blogs animation
+blogElements.forEach((element) => {
+  animationTriggerFunction(element, "scroll-blog", 0.3);
+});
 
 //video modal
 let videoModal = document.getElementById("video_modal"),
