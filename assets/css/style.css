@@ -11,19 +11,19 @@
 }
 
 /* swipper styles */
-.hero.swiper {
+.heroSwipper.swiper {
   width: 100%;
   height: 100%;
 }
 
-.hero .swiper-pagination {
+.heroSwipper .swiper-pagination {
   bottom: 2rem !important;
 }
-.hero .swiper-pagination-bullet-active {
+.swiper-pagination-bullet-active {
   background-color: #00bba7 !important;
 }
 
-.hero .swiper-pagination-bullet {
+.heroSwipper .swiper-pagination-bullet {
   background-color: white;
 }
 
@@ -95,3 +95,20 @@
 }
 
 /* testomonial */
+.reviewSwiper.swiper {
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.reviewSwiper .swiper-slide {
+  display: flex;
+  height: auto;
+}
+
+.fa-quote-left {
+  display: flex;
+}
+
+.reviewSwiper .swiper-pagination-bullet {
+  background-color: #162636;
+}

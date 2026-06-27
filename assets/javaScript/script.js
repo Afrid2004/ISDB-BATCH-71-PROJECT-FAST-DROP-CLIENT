@@ -8,7 +8,7 @@ const MobileMenuToggle = () => {
 };
 
 // swipper js for hero slider
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".heroSwipper", {
   loop: true,
   autoplay: {
     delay: 5000,
@@ -97,3 +97,37 @@ const handleVideoModal = (src = "") => {
 };
 
 // testomonial swipper
+const reviewSwiper = new Swiper(".reviewSwiper", {
+  loop: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  mousewheel: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 1,
+  },
+  mousewheel: false,
+  spaceBetween: 20,
+  keyboard: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    1024: {
+      slidesPerView: 3,
+    },
+  },
+});
