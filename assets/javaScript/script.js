@@ -137,3 +137,24 @@ const reviewSwiper = new Swiper(".reviewSwiper", {
     },
   },
 });
+
+// faq toggle
+let faqDivs = document.querySelectorAll(".faq-div");
+faqDivs.forEach((faq, index) => {
+  // always open the first faq
+  if (index === 0) {
+    faq.classList.add("active");
+  }
+  faq.addEventListener("click", () => {
+    // if contains active class or not
+    let isActive = faq.classList.contains("active");
+    faqDivs.forEach((div) => {
+      // remove all active class
+      div.classList.remove("active");
+    });
+    if (!isActive) {
+      // if not exist active class then add it
+      faq.classList.add("active");
+    }
+  });
+});
