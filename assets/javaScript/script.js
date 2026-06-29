@@ -30,6 +30,7 @@ let aboutSection = document.querySelector("#about"),
   portfolioElement = document.querySelectorAll(".portfolioElement"),
   trackingSection = document.querySelector(".trackingSection"),
   blogElements = document.querySelectorAll(".blogElements"),
+  faqElements = document.querySelectorAll(".faqElements"),
   header = document.querySelector("#header"),
   logo = document.querySelector("#logo");
 
@@ -86,6 +87,11 @@ animationTriggerFunction(trackingSection, "scroll-tracking", 0.3);
 //blogs animation
 blogElements.forEach((element) => {
   animationTriggerFunction(element, "scroll-blog", 0.3);
+});
+
+// faq elements
+faqElements.forEach((element) => {
+  animationTriggerFunction(element, "scroll-faq", 0.3);
 });
 
 //video modal
